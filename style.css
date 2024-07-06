@@ -37,15 +37,39 @@ img {
   image-rendering: pixelated;
 }
 
-#main-div {
+.window {
   border: solid;
-  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1cd0;
+  backdrop-filter: blur(4px);
   width: fit-content;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 16px;
+}
+
+.windowheader {
+  width: 100%;
+  display: flex;
+  cursor: grab;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.headertext {
+  margin: 4px;
+}
+
+.cross {
+  content: url("./cross.svg");
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 #top-bar {
