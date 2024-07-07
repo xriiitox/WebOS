@@ -53,7 +53,7 @@ function openWindow(element) {
   element.style.display = "flex";
 }
 
-var welcomeScreenClose = document.querySelector("#welcome-cross");
+var welcomeScreenClose = document.querySelector(".close");
 var welcomeScreenOpen = document.querySelector("#welcomeopen");
 
 welcomeScreenClose.onclick = () => {

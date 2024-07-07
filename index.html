@@ -5,32 +5,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>xriiiOS</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 </head>
 
 <body>
-  <div id="top-bar">
+  <div class="top-bar title-bar">
     <p id="top-name">
       xriiiOS
     </p>
-    <p id="yeah">
-      why do they call it oven when you of in the cold food of out hot eat the food
-    </p>
+    <select id="yeah">
+      <option>why do they call it oven when you of in the cold food of out hot eat the food</option>
+    </select>
     <p id="time"></p>
   </div>
-  
-  <div id="welcome" class="window">
-    <div id="welcomeheader" class="windowheader">
-      <p class="headertext">Welcome</p>
-      <div class="cross" id="welcome-cross"></div>
+
+  <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+    <div>
+      <img width="64px" height="64px" src="IMG_3976.JPEG"/>
+      <p>Welcome</p>
     </div>
-    <img id="face" width="128px" height="128px" src="IMG_3976.JPEG"/>
-    <h1 id="name">xriiiOS</h1>
-    <p id="humorous-paragraph">
-      <i>xriiiOS</i> is a <s>feature-rich</s> <u>feature-limited</u> 
-      <abbr title="operating system">OS</abbr> designed to answer 
-      the <br/>unanswerable question of <code>Who is xriiitox?</code>
-    </p>
+  </div>
+
+  <div id="welcome" class="window">
+    <div id="welcomeheader" class="title-bar">
+      <div class="title-bar-text">Welcome</div>
+      <div class="title-bar-controls">
+        <button class="close" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <img class="face" width="128px" height="128px" src="IMG_3976.JPEG" />
+      <h1 id="name">xriiiOS</h1>
+      <p id="humorous-paragraph">
+        <i>xriiiOS</i> is a <s>feature-rich</s> <u>feature-limited</u>
+        <abbr title="operating system">OS</abbr> designed to answer
+        the <br />unanswerable question of <code>Who is xriiitox?</code>
+      </p>
+    </div>
   </div>
   <script src="./script.js"></script>
 </body>

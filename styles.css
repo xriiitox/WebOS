@@ -31,7 +31,7 @@ img {
   margin-left: 16px;
 }
 
-#face {
+.face {
   margin-top: 16px;
   margin-left: 16px;
   image-rendering: pixelated;
@@ -55,7 +55,7 @@ img {
   display: flex;
   cursor: grab;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0px;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -65,6 +65,8 @@ img {
 }
 
 .cross {
+  position: absolute;
+  right: 0px;
   content: url("./cross.svg");
   width: 16px;
   height: 16px;
@@ -77,7 +79,6 @@ img {
   width: 100%;
   backdrop-filter: blur(8px);
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
   display: flex;
   justify-content: space-between;
 }
@@ -93,8 +94,6 @@ img {
 }
 
 #yeah {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 16px;
   padding: 2px 8px;
   max-width: fit-content;
 }
