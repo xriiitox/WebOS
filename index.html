@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="top-bar title-bar">
+  <div id="top-bar" class="top-bar title-bar">
     <p id="top-name">
       xriiiOS
     </p>
@@ -20,18 +20,22 @@
     <p id="time"></p>
   </div>
 
-  <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
-    <div>
-      <img width="64px" height="64px" src="IMG_3976.JPEG"/>
-      <p>Welcome</p>
+  <div id="desktopApps">
+    <div id="welcomeicon" style="text-align: center; padding: 16px; width: fit-content;">
+      <img style="width: 64px; height: 64px; border-radius: 0;" src="IMG_3976.JPEG"/>
+      <p style="font-family: 'Pixelated MS Sans Serif'; margin-top: 8px; margin-bottom: 0px;">Welcome</p>
+    </div>
+    <div id="doomicon" style="text-align: center; padding: 16px; width: fit-content;">
+      <img style="width: 64px; height: 64px; border-radius: 0;" src="doom.png"/>
+      <p style="font-family: 'Pixelated MS Sans Serif'; margin-top: 8px; margin-bottom: 0px;">DOOM</p>
     </div>
   </div>
 
-  <div id="welcome" class="window">
-    <div id="welcomeheader" class="title-bar">
+  <div id="welcome" class="window" style="display: none;">
+    <div id="welcomeheader" class="title-bar windowheader">
       <div class="title-bar-text">Welcome</div>
       <div class="title-bar-controls">
-        <button class="close" aria-label="Close"></button>
+        <button id="welcomeclose" aria-label="Close"></button>
       </div>
     </div>
     <div class="window-body">
@@ -42,6 +46,18 @@
         <abbr title="operating system">OS</abbr> designed to answer
         the <br />unanswerable question of <code>Who is xriiitox?</code>
       </p>
+    </div>
+  </div>
+
+  <div id="doom" class="window" style="display: none;">
+    <div class="title-bar windowheader">
+      <div class="title-bar-text">DOOM</div>
+      <div class="title-bar-controls">
+        <button id="doomclose" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <iframe width="640px" height="480px" src="https://wadcmd.com/" title="DOOM"></iframe>
     </div>
   </div>
   <script src="./script.js"></script>

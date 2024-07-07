@@ -15,12 +15,6 @@ body {
   padding: 0;
 }
 
-img {
-  border-radius: 128px;
-  object-fit: cover;
-  
-}
-
 #name {
   font-size: 32px;
   font-weight: bold;
@@ -34,6 +28,7 @@ img {
 .face {
   margin-top: 16px;
   margin-left: 16px;
+  border-radius: 128px;
   image-rendering: pixelated;
 }
 
@@ -51,36 +46,11 @@ img {
 }
 
 .windowheader {
-  width: 100%;
-  display: flex;
   cursor: grab;
-  align-items: center;
-  justify-content: center;
-  margin: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .headertext {
   margin: 4px;
-}
-
-.cross {
-  position: absolute;
-  right: 0px;
-  content: url("./cross.svg");
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  cursor: pointer;
-}
-
-#top-bar {
-  position: absolute;
-  width: 100%;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-between;
 }
 
 #top-name {
@@ -96,4 +66,10 @@ img {
 #yeah {
   padding: 2px 8px;
   max-width: fit-content;
+}
+
+.selected {
+  background-color: #1c1c1ca0;
+  color: #a9a9a9;
+  border-radius: 16px;
 }
