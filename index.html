@@ -7,6 +7,17 @@
   <title>xriiiOS</title>
   <link rel="stylesheet" href="https://unpkg.com/98.css" type="text/css" />
   <link rel="stylesheet" href="styles.css" type="text/css"/>
+  <script src="https://editor.codecogs.com/eqneditor.api.min.js"></script>
+  <link rel="stylesheet" href="https://editor.codecogs.com/eqneditor.css"/>
+  <script>
+    window.onload = function () {
+      textarea = EqEditor.TextArea.link('latexInput')
+        .addOutput(new EqEditor.Output('output'))
+        .addHistoryMenu(new EqEditor.History('history'));
+
+      EqEditor.Toolbar.link('toolbar').addTextArea(textarea);
+    }
+  </script>
 </head>
 
 <body>
@@ -29,9 +40,13 @@
       <img style="width: 64px; height: 64px; border-radius: 0;" src="doom.png"/>
       <p style="font-family: 'Pixelated MS Sans Serif'; margin-top: 8px; margin-bottom: 0px;">DOOM</p>
     </div>
+    <div id="latexicon" style="text-align: center; padding: 16px; width: fit-content;">
+      <img style="width: 64px; height: 64px; border-radius: 0;" src="https://static-00.iconduck.com/assets.00/latex-icon-2014x2048-wyowdlpa.png"/>
+      <p style="font-family: 'Pixelated MS Sans Serif'; margin-top: 8px; margin-bottom: 0px;">LaTeX</p>
+    </div>
   </div>
 
-  <div id="welcome" class="window" style="display: none;">
+  <div id="welcome" class="window">
     <div id="welcomeheader" class="title-bar windowheader">
       <div class="title-bar-text">Welcome</div>
       <div class="title-bar-controls">
@@ -39,18 +54,16 @@
       </div>
     </div>
     <div class="window-body">
-      <img class="face" width="128px" height="128px" src="IMG_3976.JPEG" />
-      <h1 id="name">xriiiOS</h1>
+      <!--<img class="face" width="128px" height="128px" src="IMG_3976.JPEG" />-->
+      <!--<h1 id="name">xriiiOS</h1>-->
       <p id="humorous-paragraph">
-        <i>xriiiOS</i> is a <s>feature-rich</s> <u>feature-limited</u>
-        <abbr title="operating system">OS</abbr> designed to answer
-        the <br />unanswerable question of <code>Who is xriiitox?</code>
+        <iframe width="480px" height="640px" src="https://xriiitox.github.io"></iframe>
       </p>
     </div>
   </div>
 
   <div id="doom" class="window" style="display: none;">
-    <div class="title-bar windowheader">
+    <div id="doomheader" class="title-bar windowheader">
       <div class="title-bar-text">DOOM</div>
       <div class="title-bar-controls">
         <button id="doomclose" aria-label="Close"></button>
@@ -58,6 +71,23 @@
     </div>
     <div class="window-body">
       <iframe width="640px" height="480px" src="https://wadcmd.com/" title="DOOM"></iframe>
+    </div>
+  </div>
+
+  <div id="latex" class="window" style="display: none;">
+    <div id="latexheader" class="title-bar windowheader">
+      <div class="tite-bar-text">LaTeX Editor</div>
+      <div class="title-bar-controls">
+        <button id="latexclose" aria-label="Close"></button>
+      </div>
+    </div>
+    <div id="equation-editor" class="window-body">
+      <div id="history"></div>
+      <div id="toolbar"></div>
+      <div id="latexInput" placeholder="Write Equation here..."></div>
+      <div id="equation-output">
+        <img id="output">
+      </div>
     </div>
   </div>
   <script src="./script.js"></script>

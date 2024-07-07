@@ -87,6 +87,7 @@ function addIconTapHandling(element, window) {
 
 addIconTapHandling(document.querySelector("#welcomeicon"), document.querySelector("#welcome"))
 addIconTapHandling(document.querySelector("#doomicon"), document.querySelector("#doom"))
+addIconTapHandling(document.querySelector("#latexicon"), document.querySelector("#latex"))
 
 var biggestIndex = 1;
 
@@ -112,3 +113,4 @@ function initializeWindow(elementName) {
 
 initializeWindow("doom")
 initializeWindow("welcome")
+initializeWindow("latex")
